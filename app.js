@@ -1,23 +1,22 @@
-const playGame = true;
 
 //Game Categories and words
 
 gameWords = [
     {
         category: 'Phrase',
-        words: ['HAKUNA MATATA', 'A BIG FISH IN A SMALL POND', 'A DAY LATE AND A DOLLAR SHORT']
+        words: ['HAKUNA MATATA', 'A BIG FISH IN A SMALL POND', 'A DAY LATE AND A DOLLAR SHORT', 'EVERY DOG HAS HIS DAY']
     },
     {
         category: 'Place',
-        words: ['SEATTLE WASHINGTON', 'DISNEYLAND', 'DOMINICAN REPUBLIC']
+        words: ['SEATTLE WASHINGTON', 'DISNEYLAND', 'DOMINICAN REPUBLIC', 'HONOLULU']
     },
     {
         category: 'Thing',
-        words: ['MICROWAVE', 'CONVENTIONAL OVEN', 'CHESS BOARD']
+        words: ['MICROWAVE', 'CONVENTIONAL OVEN', 'CHESS BOARD', 'TELEVISION']
     },
     {
         category: 'Person',
-        words: ['STEVE CARELL', 'JENNIFER ANISTON', 'LEBRON JAMES']
+        words: ['STEVE CARELL', 'JENNIFER ANISTON', 'LEBRON JAMES', 'STEPHEN CURRY']
     }
 ];
 
@@ -114,6 +113,9 @@ correctLetter = (wordSplit) => {
         wheelPayout()
         alert(`Nice one! Spin the wheel again`)
     } 
+    if (Player1.bank > 5000) {
+        alert(`Congrats! You've won the game, you take home all the money you earned!`)
+    }
 }
 
 incorrectLetter = (wordSplit) => {
@@ -152,35 +154,6 @@ wheelPayout = () => {
     }
 }
 
-//Wrong wheel pay out
-
-incorrectwheelPayout = () => {
-    if (deg == 7045){
-        Player1.bank -= 50
-        $newScore.text(`Bank: $${Player1.bank}`).appendTo('.guess-container')
-    }
-    if (deg == 7345){
-        Player1.bank -= 100
-        $newScore.text(`Bank: $${Player1.bank}`).appendTo('.guess-container')
-    }
-    if (deg == 7265){
-        Player1.bank -= 150
-        $newScore.text(`Bank: $${Player1.bank}`).appendTo('.guess-container')
-    }
-    if (deg == 7245){
-        Player1.bank -= 200
-        $newScore.text(`Bank: $${Player1.bank}`).appendTo('.guess-container')
-    }
-    if (deg == 7150){
-        Player1.bank -= 250
-        $newScore.text(`Bank: $${Player1.bank}`).appendTo('.guess-container')
-    }
-    if (deg == 7450){
-        Player1.bank -= 300
-        $newScore.text(`Bank: $${Player1.bank}`).appendTo('.guess-container')
-    }
-}
-
 //Word guess matches current word
 
 correctWord = () => {
@@ -196,6 +169,9 @@ correctWord = () => {
         $newScore.text(`Bank: $${Player1.bank}`).appendTo('.guess-container')
         playerGuess.pop()
         createNewWord()
+    }
+    if (Player1.bank > 5000) {
+        alert(`Congrats! You've won the game, you take home all the money you earned!`)
     }
 };
 
@@ -279,7 +255,3 @@ $wheel.on('transitionend', () => {
     $wheel.css(`transform`, `rotate(${newDeg}deg)`)
 })  
 
-
-if (Player1.bank >= 5000) {
-    alert(`Congrats! You've won the game, you take home all the money you earned!`)
-}
