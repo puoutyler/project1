@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script
+        src="https://code.jquery.com/jquery-3.5.0.js"
+        integrity="sha256-r/AaFHrszJtwpe+tHyNi/XCfMxYpbsRg2Uqn0x3s2zc="
+        crossorigin="anonymous"
+        defer
+    ></script>
+    <script src="app.js" defer></script>
+    <title>Wheel of Fortune</title>
+</head>
+<body>
+    <div class='main-container'>
+        <button class='modal-buttons'  id="openModal">Game Instructions</button>
+        <div id='modal'>
+            <div id='modal-textbox'>
+                <img id='margot-head' src="../pics/margot-robbie-celebrity-mask.png">
+                <h2>Welcome to Wheel of Fortune!</h2>
+                <p>First, spin the wheel!</p>
+                <p>Next, guess a letter. If you guess correctly, you win the corresponding amount shown on the wheel! Guess wrong and that amount will be deducted from your total.</p>
+                <p>Once you think you know the word or phrase, enter your guess in the box. If correct, you win a $500 bonus!</p>
+                <p>The first player to $5,000 wins</p>
+                <p>Good Luck!</p>
+                <div id='modal-footer'>
+                <button class='modal-buttons' id='close' href '#'>Close</button>
+            </div>
+         </div>
+        </div>
+        <div class='guess-container'>
+            <form class='guess-box'>
+                <label for="guess-box">Make a guess:</label>
+                <input type="text" id="guess-box">
+                <input type="submit">
+            </form>
+            <form class='guess-letter-box'>
+                <label for="guess-letter-box">Guess a letter:</label>
+                <input type="text" id="guess-letter-box">
+                <input type="submit">
+            </form>
+        </div>
+        <div class='letter-container'>
+            
+        </div> 
+        <div class='cover-container'>
+
+        </div>
+
+        <img id='margot' src='../pics/margot.png'>
+        <div class='wheel-container'>
+            <img id='wheel' src="../pics/wheel.png">
+            <img id='pointer' src="../pics/pointer.png">
+            <button id='spin-btn'>Spin the wheel!</button>
+        </div>
+    </div>  
+</body>
+</html>
