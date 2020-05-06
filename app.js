@@ -223,8 +223,8 @@ newRandomWord = () => {
     let randomCategory = Math.floor(Math.random() * gameWords.length);
     let randomWords = Math.floor(Math.random() * gameWords[randomCategory].words.length);
     let currentCategory = gameWords[randomCategory].category;
-    let currentWord = gameWords[randomCategory].words[randomWords];
-    let wordSplit = currentWord.split('')
+    currentWord = gameWords[randomCategory].words[randomWords];
+    wordSplit = currentWord.split('')
     $displayCategory.text(`Category: ${currentCategory}`).appendTo('.guess-container')
     return wordSplit
 }
@@ -280,3 +280,6 @@ $wheel.on('transitionend', () => {
 })  
 
 
+if (Player1.bank >= 5000) {
+    alert(`Congrats! You've won the game, you take home all the money you earned!`)
+}
