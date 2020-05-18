@@ -232,7 +232,7 @@ $(() => {
 
     $closeBtn.on('click', closeModal);
 
-    // $openBtn.trigger('click')
+    $openBtn.trigger('click')
 })
 
 //Wheel Jquery 
