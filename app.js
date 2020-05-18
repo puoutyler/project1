@@ -210,6 +210,7 @@ newRandomWord = () => {
 // newWordJoin = newRandomWord().join('')
 
 // console.log(newWordJoin)
+
 //Game instructions modal
 
 $(() => { 
@@ -230,6 +231,8 @@ $(() => {
     $openBtn.on('click', openModal)
 
     $closeBtn.on('click', closeModal);
+
+    $openBtn.trigger('click')
 })
 
 //Wheel Jquery 
