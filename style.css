@@ -74,19 +74,26 @@ h2 {
 
 .guess-letter-box{
     position: relative;
+    display: flex;
     bottom: 10px;
     padding: auto;
-    top: 517px;
+    top: 486px;
     bottom: 10px;
     left: -50px;
 }
 
 .guess-box{
     position: relative;
-    top: 535px;
+    top: 528px;
     bottom: 10px;
-    left: 250px;
+    left: 270px;
     padding: auto;
+}
+
+.guess-btn{
+    position: relative;
+    top: -21px;
+    right: -267px;
 }
 
 #modal {
